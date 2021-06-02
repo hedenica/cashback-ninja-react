@@ -10,7 +10,8 @@
     "lint": "eslint src --ext js,tsx",
     "lint:fix": "yarn lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit" : "cz"
   },
   "lint-staged": {
     "src/**/*": [
@@ -33,6 +34,8 @@
     ]
   },
   "dependencies": {
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
     "@testing-library/jest-dom": "5.11.4",
     "@testing-library/react": "11.1.0",
     "@testing-library/user-event": "12.1.10",
@@ -45,6 +48,7 @@
     "@types/styled-components": "5.1.9",
     "axios": "0.21.1",
     "clsx": "1.1.1",
+    "commitizen": "4.2.4",
     "eslint-config-standard": "16.0.2",
     "eslint-config-standard-jsx": "10.0.0",
     "eslint-config-standard-react": "11.0.1",
@@ -68,6 +72,17 @@
     "web-vitals": "1.0.1"
   },
   "devDependencies": {
-    "@types/react-router-dom": "5.1.7"
+    "@types/react-router-dom": "5.1.7",
+    "cz-conventional-changelog": "3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog",
+      "defaultType": "feat",
+      "disableScopeLowerCase": true,
+      "disableSubjectLowerCase": true,
+      "maxHeaderWidth": 50,
+      "maxLineWidth": 72
+    }
   }
 }
