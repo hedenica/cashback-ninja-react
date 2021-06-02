@@ -13,7 +13,7 @@ export function Header () {
     <div className={styles.container}>
       <header className={styles.header}>
         <div className={styles.title}>
-          <img src={ninjaImg} alt="Cashback Ninja Logo" />
+          <img src={ninjaImg} alt='Cashback Ninja Logo' />
           <h1>Cashback Ninja</h1>
         </div>
         <blockquote className={styles.blockquote}>

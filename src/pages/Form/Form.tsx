@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState, FormEvent, ChangeEvent } from 'react'
 import { useHistory } from 'react-router'
 
@@ -22,10 +21,10 @@ export function Form () {
 
   const handleInputProductChange = (
     event: ChangeEvent<HTMLInputElement>,
-    id: number
+    id: number,
   ): void => {
     const updatedProductField = formFields.map(field =>
-      field.id === id ? { ...field, productValue: event.target.value } : field
+      field.id === id ? { ...field, productValue: event.target.value } : field,
     )
 
     setFormFields(updatedProductField)
@@ -40,12 +39,12 @@ export function Form () {
 
   const handleInputPriceChange = (
     event: ChangeEvent<HTMLInputElement>,
-    id: number
+    id: number,
   ): void => {
     const updatedPriceField = formFields.map(field =>
       field.id === id
         ? { ...field, priceValue: maskPrice(event.target.value) }
-        : field
+        : field,
     )
 
     setFormFields(updatedPriceField)
@@ -63,7 +62,7 @@ export function Form () {
 
   const handleRemoveProduct = (fieldId: number): void => {
     setFormFields(formFields =>
-      formFields.filter(field => field.id !== fieldId)
+      formFields.filter(field => field.id !== fieldId),
     )
   }
 
@@ -98,30 +97,30 @@ export function Form () {
 
   return (
     <>
-      <form id="form" onSubmit={handleSubmit}>
+      <form id='form' onSubmit={handleSubmit}>
         <h2>Cadastre seu pedido</h2>
         {formFields.map(field => (
           <div key={field.id} className={styles.form}>
             <Input
-              name="product"
+              name='product'
               className={styles.input}
-              type="text"
-              placeholder="nome do produto"
+              type='text'
+              placeholder='nome do produto'
               value={field.productValue}
               onChange={event => handleInputProductChange(event, field.id)}
             />
             <Input
-              name="price"
+              name='price'
               className={styles.input}
-              type="text"
-              placeholder="preço"
+              type='text'
+              placeholder='preço'
               value={field.priceValue}
               onChange={event => handleInputPriceChange(event, field.id)}
             />
             <Button
-              type="button"
-              color="red"
-              size="small"
+              type='button'
+              color='red'
+              size='small'
               className={styles.button}
               onClick={() => handleRemoveProduct(field.id)}
             >
@@ -133,13 +132,13 @@ export function Form () {
       <div className={styles.btnContainer}>
         <Button
           className={styles.addProduct}
-          color="yellow"
-          size="large"
+          color='yellow'
+          size='large'
           onClick={handleAddProduct}
         >
           Adicionar novo produto
         </Button>
-        <Button type="submit" form="form" color="yellow" size="large">
+        <Button type='submit' form='form' color='yellow' size='large'>
           Finalizar pedido
         </Button>
       </div>

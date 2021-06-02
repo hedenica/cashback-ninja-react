@@ -27,6 +27,6 @@ export function useCreateOrder () {
       onSettled: () => {
         queryClient.invalidateQueries('orders')
       },
-    }
+    },
   )
 }

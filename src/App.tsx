@@ -20,16 +20,16 @@ function App () {
   return (
     <Router>
       <QueryClientProvider client={queryClient}>
-          <div className="content-wrapper">
-            <Header />
-            <Switch>
-              <Route component={Home} path="/" exact />
-              <Route component={Form} path="/register" />
-              <Redirect from="*" to="/" />
-            </Switch>
-          </div>
-          <Footer />
-          <ReactQueryDevtools initialIsOpen={false} />
+        <div className='content-wrapper'>
+          <Header />
+          <Switch>
+            <Route component={Home} path='/' exact />
+            <Route component={Form} path='/register' />
+            <Redirect from='*' to='/' />
+          </Switch>
+        </div>
+        <Footer />
+        <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </Router>
   )

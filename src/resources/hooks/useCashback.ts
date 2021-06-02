@@ -16,7 +16,7 @@ export function useCashback (orders: Orders[]) {
 
   useEffect(() => {
     setCashbackTotal(
-      formatCurrency(getCashbackTotal(orders.map(order => order.total)))
+      formatCurrency(getCashbackTotal(orders.map(order => order.total))),
     )
   }, [orders])
 

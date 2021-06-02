@@ -22,7 +22,7 @@ export function Card ({ orders }: CardProps) {
         <div key={order.id} className={styles.card}>
           <div className={styles.banner}>
             <div className={styles.order}>
-              <img src={shoppingBag} alt="sacola de compras" />
+              <img src={shoppingBag} alt='sacola de compras' />
               <p>Pedido | Nº {order.id}</p>
             </div>
           </div>
@@ -40,7 +40,7 @@ export function Card ({ orders }: CardProps) {
             </div>
           </div>
           <div className={styles.cardCashback}>
-            <img src={cashbackImg} alt="porquinho" />
+            <img src={cashbackImg} alt='porquinho' />
             <span>
               cashback | {formatCurrency(getCashbackByOrder(order.total))}
             </span>

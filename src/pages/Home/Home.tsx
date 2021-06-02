@@ -20,34 +20,34 @@ export function Home () {
     <>
       {isLoading
         ? (
-        <Lottie
-          options={lottieDefault(loadingLottie)}
-          height={400}
-          width={400}
-        />
+          <Lottie
+            options={lottieDefault(loadingLottie)}
+            height={400}
+            width={400}
+          />
           )
         : (
-        <>
-          {orders.length > 0
-            ? (
-            <Card orders={orders} />
-              )
-            : (
-            <Lottie
-              options={lottieDefault(emptyStateLottie)}
-              height={400}
-              width={400}
-            />
-              )}
-          <div className={styles.btnContainer}>
-            <Link to="/register">
-              <Button color="yellow" size="large" className={styles.button}>
-                <img src={clickImg} alt="" />
-                Cadastrar nova compra
-              </Button>
-            </Link>
-          </div>
-        </>
+          <>
+            {orders.length > 0
+              ? (
+                <Card orders={orders} />
+                )
+              : (
+                <Lottie
+                  options={lottieDefault(emptyStateLottie)}
+                  height={400}
+                  width={400}
+                />
+                )}
+            <div className={styles.btnContainer}>
+              <Link to='/register'>
+                <Button color='yellow' size='large' className={styles.button}>
+                  <img src={clickImg} alt='' />
+                  Cadastrar nova compra
+                </Button>
+              </Link>
+            </div>
+          </>
           )}
     </>
   )

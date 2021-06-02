@@ -22,7 +22,7 @@ export function Button (props: ButtonProps) {
         className,
         styles.button,
         size && [styles[types.size]],
-        color && [styles[types.color]]
+        color && [styles[types.color]],
       )}
       {...remainingProps}
     >
