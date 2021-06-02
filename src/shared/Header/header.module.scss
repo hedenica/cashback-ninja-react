@@ -1,0 +1,39 @@
+.container {
+  width: 100%;
+  height: 300px;
+  background-image: url('../../assets/header-background.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: var(--text);
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.125rem;
+  padding: 1.5rem;
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+}
+
+.blockquote {
+  letter-spacing: 0.188rem;
+  margin: 1.5rem 0;
+  font-size: 1.5rem;
+}

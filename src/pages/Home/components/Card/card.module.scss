@@ -1,0 +1,114 @@
+.cardColumns {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  align-items: center;
+  justify-items: center;
+
+  padding: 50px;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 300px;
+
+  height: 400px;
+  min-height: 400px;
+
+  border-radius: 12px;
+  background: var(--white);
+  box-shadow: 0px 1rem 1.5rem rgb(0 0 0 / 30%);
+
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translate3D(0,-1px,0) scale(1.03);
+}
+
+.banner {
+  background-image: url('../../../../assets/piggy.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+
+  position: absolute;
+  top: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  left: 0;
+  right: 0;
+  
+  height: 7rem;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.order {
+  width: 60%;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--white);
+  transform: translateY(50%);
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 20%);
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+.itensContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 40px 0;
+  align-items: flex-start;
+  line-height: 1.8rem;
+  font-size: 1rem;
+
+  height: 200px;
+
+  position: absolute;
+  top: 112px;
+  left: 0;
+  right: 0;
+
+  overflow: auto;
+}
+
+.cardCashback {
+  background: var(--yellow);
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  img {
+    margin-right: 8px;
+  }
+}

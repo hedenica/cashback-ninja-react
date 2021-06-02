@@ -1,0 +1,14 @@
+.input {
+  border: 2px solid var(--yellow);
+  border-radius: 4px;
+  height: 3rem;
+  width: 250px;
+  padding: 10px;
+  background: inherit;
+  caret-color: var(--yellow);
+}
+
+.input::placeholder {
+  color: var(--yellow);
+  letter-spacing: 0.122rem;
+}

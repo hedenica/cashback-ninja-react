@@ -1,0 +1,36 @@
+form h2 {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.form:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+.input:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+.button {
+  margin-left: 20px;
+  color: var(--white);
+}
+
+.btnContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.addProduct {
+  margin-bottom: 20px;
+}
