@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render properly 1`] = `
+<div>
+  <div
+    class="cardColumns"
+  >
+    <div
+      class="card"
+    >
+      <div
+        class="banner"
+      >
+        <div
+          class="order"
+        >
+          <img
+            alt="sacola de compras"
+            src="shopping-bag.svg"
+          />
+          <p>
+            Pedido | Nº 
+            1
+          </p>
+        </div>
+      </div>
+      <div
+        class="itensContainer"
+      >
+        <div
+          class="itensList"
+        >
+          <p>
+            foo
+          </p>
+        </div>
+        <div
+          class="itensPrice"
+        >
+          <p>
+            R$ 123,00
+          </p>
+        </div>
+      </div>
+      <div
+        class="cardCashback"
+      >
+        <img
+          alt="porquinho"
+          src="cashback.svg"
+        />
+        <span>
+          cashback | 
+          R$ 12,30
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
