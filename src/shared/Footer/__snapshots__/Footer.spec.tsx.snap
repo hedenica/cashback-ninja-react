@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer should render properly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <footer
+      class="footer"
+    >
+      <h3>
+        made with 💛 by hedênica morais
+      </h3>
+    </footer>
+  </div>
+</div>
+`;
