@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render properly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <header
+      class="header"
+    >
+      <div
+        class="title"
+      >
+        <img
+          alt="Cashback Ninja Logo"
+          src="ninja-cashback.png"
+        />
+        <h1>
+          Cashback Ninja
+        </h1>
+      </div>
+      <blockquote
+        class="blockquote"
+      >
+        "O melhor cashback da internet"
+      </blockquote>
+      <h3>
+        Seu saldo em cashback: XX,XX
+      </h3>
+    </header>
+  </div>
+</div>
+`;
