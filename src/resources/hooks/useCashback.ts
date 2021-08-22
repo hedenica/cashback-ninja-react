@@ -1,9 +1,5 @@
-import { useEffect, useState } from 'react'
-import {
-  formatCurrency,
-  getCashbackTotal,
-  Product,
-} from 'resources'
+import { useEffect, useState, useCallback } from 'react';
+import { formatCurrency, getCashbackTotal, Product } from 'resources';
 
 interface Orders {
   id: number;
@@ -11,16 +7,23 @@ interface Orders {
   total: number;
 }
 
-export function useCashback (orders: Orders[]) {
-  const [cashbackTotal, setCashbackTotal] = useState('XX,XX')
+export function useCashback(orders: Orders[]) {
+  const [cashbackTotal, setCashbackTotal] = useState('XX,XX');
 
-  useEffect(() => {
+  const handleCashbackTotal = useCallback(() => {
     setCashbackTotal(
       formatCurrency(getCashbackTotal(orders.map(order => order.total))),
-    )
-  }, [orders])
+    );
+  }, [orders]);
+
+  useEffect(() => {
+    if (orders) {
+      handleCashbackTotal();
+    }
+  }, [orders, handleCashbackTotal]);
 
   return {
     cashbackTotal,
-  }
+    handleCashbackTotal,
+  };
 }
