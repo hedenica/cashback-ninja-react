@@ -9,44 +9,6 @@
         }
       ],
       "total": 300
-    },
-    {
-      "products": [
-        {
-          "name": "Livro de Testes",
-          "price": 200.5
-        }
-      ],
-      "total": 200.5,
-      "id": 1
-    },
-    {
-      "products": [
-        {
-          "name": "Mouse logitech Pebble",
-          "price": 200
-        },
-        {
-          "name": "Mousepad Razer",
-          "price": 135
-        }
-      ],
-      "total": 335,
-      "id": 2
-    },
-    {
-      "products": [
-        {
-          "name": "Relogio",
-          "price": 313.12
-        },
-        {
-          "name": "Mousepad",
-          "price": 221.31
-        }
-      ],
-      "total": 534.4300000000001,
-      "id": 3
     }
   ]
 }

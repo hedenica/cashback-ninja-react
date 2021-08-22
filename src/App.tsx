@@ -3,36 +3,36 @@ import {
   Switch,
   Route,
   Redirect,
-} from 'react-router-dom'
-import { QueryClient, QueryClientProvider } from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools'
+} from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
 
-import { Home } from 'pages/Home'
-import { Form } from 'pages/Form'
-import { Header } from 'shared/Header'
-import { Footer } from 'shared/Footer'
+import { Home } from 'pages/Home';
+import { Form } from 'pages/Form';
+import { Header } from 'shared/Header';
+import { Footer } from 'shared/Footer';
 
-import './global.css'
+import './global.css';
 
-const queryClient = new QueryClient()
+const queryClient = new QueryClient();
 
-function App () {
+function App() {
   return (
     <Router>
       <QueryClientProvider client={queryClient}>
-        <div className='content-wrapper'>
+        <div className="content-wrapper" id="content-wrapper">
           <Header />
           <Switch>
-            <Route component={Home} path='/' exact />
-            <Route component={Form} path='/register' />
-            <Redirect from='*' to='/' />
+            <Route component={Home} path="/" exact />
+            <Route component={Form} path="/register" />
+            <Redirect from="*" to="/" />
           </Switch>
         </div>
         <Footer />
         <ReactQueryDevtools initialIsOpen={false} />
       </QueryClientProvider>
     </Router>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -4,13 +4,13 @@
     "react-app/jest",
     "standard",
     "standard-jsx",
-    "standard-react"
+    "standard-react",
+    "plugin:cypress/recommended"
   ],
-  "plugins": [
-    "only-warn"
-  ],
+  "plugins": ["only-warn", "cypress"],
   "globals": {
-    "JSX": true
+    "JSX": true,
+    "cy": true
   },
   "rules": {
     "comma-dangle": [
@@ -25,8 +25,11 @@
     ],
     "react/react-in-jsx-scope": "off",
     "no-unused-vars": "off",
-    "@typescript-eslint/no-unused-vars": ["error", {
-      "ignoreRestSiblings": true
-    }]
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      {
+        "ignoreRestSiblings": true
+      }
+    ]
   }
 }

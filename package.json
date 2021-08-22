@@ -6,13 +6,13 @@
     "dev": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:cy": "cypress open",
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint src --ext js,tsx",
     "lint:fix": "yarn lint --fix",
     "type-check": "tsc --project tsconfig.json --pretty --noEmit",
-    "prepare": "husky install",
-    "commit": "cz"
+    "prepare": "husky install"
   },
   "lint-staged": {
     "src/**/*": [
@@ -73,8 +73,16 @@
     "web-vitals": "1.0.1"
   },
   "devDependencies": {
+    "@testing-library/cypress": "^8.0.0",
+    "@testing-library/react-hooks": "7.0.0",
     "@types/react-router-dom": "5.1.7",
-    "cz-conventional-changelog": "3.3.0"
+    "cypress": "^8.0.0",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint-plugin-cypress": "^2.11.3",
+    "nock": "^13.1.1",
+    "prettier": "^2.3.2",
+    "pretty-quick": "^3.1.1",
+    "react-test-renderer": "17.0.2"
   },
   "config": {
     "commitizen": {
